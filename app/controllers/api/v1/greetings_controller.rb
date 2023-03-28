@@ -1,5 +1,5 @@
 class Api::V1::GreetingsController < ApplicationController
-  def show
-    Greeting.all.sample
+  def index
+    render json:Greeting.all.sample
   end
 end

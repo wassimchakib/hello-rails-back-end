@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  root "greetings#show"
-
+  root "api/v1/greetings#index"
+  
   namespace :api do
     namespace :v1 do
-      resources :greetings, only: [:show]
+      resources :greetings, only: [:index]
     end
   end
 end
